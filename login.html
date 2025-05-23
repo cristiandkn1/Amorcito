@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 2 Mes Preciosa💞😘</title>
+    <link rel="stylesheet" href="css/estilos.css"> 
+</head>
+
+<body>
+    
+    <div>
+        <div class="heart"> </div>
+        <div class="heart6"> </div>
+        <div class="heart5"> </div>
+        <div class="heart4"> </div>
+        <div class="heart3"> </div>
+        <div class="heart2"> </div>
+        <div class="heart1"> </div>
+        <div class="heart7"> </div>
+        <div class="heart8"> </div>
+        <div class="heart9"> </div>
+        <div class="heart10"> </div>
+        <div class="heart11"> </div>
+        <div class="heart12"> </div>
+    </div>
+
+    
+    <div class="login-panel">
+        <h2>Contraseña Secreta🫣🔒</h2>
+        <input type="password" id="password" placeholder="Contraseña secreta">
+        <button onclick="checkPassword()">Entrar</button>
+        <p><h1></h1></p>
+        <div id="error-message" class="error-message" style="display: none;">Contraseña Incorrecta Princesa👑 🚫 <br>
+            <span id="opportunity-message">1 Oportunidad más</span>
+        </div>
+    
+        <img id="error-gif" src="img/verguenza.webp" alt="Error GIF" class="error-gif">
+        <img id="effect-image" src="img/triste.jpg" alt="Efecto" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 20px;">
+        <audio id="button-sound" src="img/click-sound.mp3" preload="auto"></audio> 
+
+    </div>
+
+    <div id="notification" class="notification">
+        <p>Funaita por no saberlo de nuevo!! 😡 <br>
+            
+    
+            <br>
+
+        </p>
+        <p> <h1> </h1></p>
+        <p class="ola"> nuestra fechita Amor 00/00/00💘😘</p>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0); // Fuerza la posición de la ventana a la parte superior izquierda
+        };
+    
+        var attempts = 0;
+    
+        function checkPassword() {
+    var password = document.getElementById("password").value;
+    var errorMessage = document.getElementById("error-message");
+    var opportunityMessage = document.getElementById("opportunity-message");
+    var errorGif = document.getElementById("error-gif");
+    var notification = document.getElementById("notification");
+    var effectImage = document.getElementById("effect-image");
+    var buttonSound = document.getElementById("button-sound");
+
+
+    if (password === "25/07/24") {
+        window.location.href = "si.html";
+    } else {
+        attempts++;
+        errorMessage.style.display = "block";
+        errorGif.style.display = "block";
+
+        // Reiniciar el sonido
+        buttonSound.currentTime = 0; // Reinicia el tiempo del sonido
+        buttonSound.play(); // Reproduce el sonido
+
+        // Mostrar imagen de efecto
+        effectImage.style.display = "block";
+
+        // Ocultar imagen de efecto después de 200 ms
+        setTimeout(function() {
+            effectImage.style.display = "none";
+        }, 200);
+
+        // Actualizar mensaje de oportunidades
+        if (attempts === 1) {
+            opportunityMessage.innerHTML = "<span style='color: #ff66b2;'>1 Oportunidad más</span>";
+        } else if (attempts >= 2) {
+            opportunityMessage.innerHTML = "<span style='color: #ff66b2;'>Pxa bebé se viene pista 💔</span>";
+        }
+
+        // Mostrar notificación después del segundo intento
+        if (attempts >= 2) {
+            notification.style.display = "block";
+        }
+    }
+}
+    </script>
+</body>
+</html>

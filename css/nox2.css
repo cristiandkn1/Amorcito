@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Cambia a fixed para evitar problemas con el scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/infierno.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px); /* Ajusta la intensidad del desenfoque aquí */
+    z-index: -1; /* Asegura que el fondo borroso esté detrás del contenido */
+}
+
+/* Opcional: Añade un color de fondo semitransparente para mejorar la visibilidad del texto */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la transparencia si es necesario */
+}
+
+
+.beso {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 10%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 42%; /* Ajusta este valor para mover la imagen horizontalmente */
+    
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+}
+.beso1 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 78.8%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 5%; /* Ajusta este valor para mover la imagen horizontalmente */
+    
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+}
+.beso2 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 78.8%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 78%; /* Ajusta este valor para mover la imagen horizontalmente */
+    
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+}
+.beso3 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 78.8%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 42%; /* Ajusta este valor para mover la imagen horizontalmente */
+    
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+}
+
+/* Efecto de hover para la imagen */
+
+.titulo-rosad1 {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+
+    color: #f0c0d8; /* Color rosado */
+    position: relative; /* Permite ajustar la posición usando top */
+    top: 20px; /* Ajusta este valor para mover el h1 hacia arriba o hacia abajo */
+    font-family: 'Arial', sans-serif; /* Asegura una fuente legible */
+    text-align: center; /* Centra el texto horizontalmente */
+    
+
+}
+
+.titulo-rosado {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+
+    color: #f8c2dd; /* Color rosado */
+    position: relative; /* Permite ajustar la posición usando top */
+    top: -10px; /* Ajusta este valor para mover el h1 hacia arriba o hacia abajo */
+    font-family: 'Arial', sans-serif; /* Asegura una fuente legible */
+    text-align: center; /* Centra el texto horizontalmente */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Efecto de brillo */
+
+}
+
+/* BOTONES -----------------------------------------------------------------*/
+
+
+button.si {
+    background-color: #ff66b2; /* Color rosado */
+    color: rgb(99, 91, 91); /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 32px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para cambios de color y transformaciones */
+    position: absolute; /* Permite posicionar el botón usando 'top' y 'left' */
+    top: 60%; /* Posición desde la parte superior del contenedor */
+    left:45%; /* Posición desde la parte izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra el botón respecto a su punto de origen */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Efecto de brillo */
+
+}
+
+button.si:hover {
+    background-color: #ff3399; /* Color más oscuro al pasar el cursor */
+    transform: translate(-50%, -50%) scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* Estilo para el botón 'NO' */
+button.no {
+    background-color: #333333; /* Color negro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para cambios de color y transformaciones */
+    position: absolute; /* Permite posicionar el botón usando 'top' y 'left' */
+    top: 60%; /* Posición desde la parte superior del contenedor */
+    left: 54%; /* Posición desde la parte izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra el botón respecto a su punto de origen */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Efecto de brillo */
+
+}
+
+button.no:hover {
+    background-color: #555555; /* Color gris oscuro al pasar el cursor */
+    transform: translate(-50%, -50%) scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como que nox2☹️</title>
+    <link rel="stylesheet" href="css/nox2.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap">
+
+</head>
+
+<body>
+    <div class="container">  
+        <div class="contenedor-texto">
+        <img class="beso" src="img/nox2.gif">
+        <img class="beso1" src="img/fuego.gif">
+        <img class="beso2" src="img/fuego.gif">
+        <img class="beso3" src="img/fuego.gif">
+
+        <h1 class="titulo-rosado"> No Te Queda Otra 😈, Vas A Ser Mia Por Las Buenas O Por Las Malas😽</h1>
+        <button class="si" onclick="location.href='si.html'">Si quiero</button>
+            <button class="no" onclick="location.href='#'" id="btn-random">NO</button>
+        </div> 
+    </div>
+    <script>
+        const btnNo = document.querySelector("#btn-random")
+
+        function moverAleatoriamente(btn) {
+    btn.style.position = "absolute";
+    btn.style.fontWeight = "bolder";
+    btn.style.top = Math.floor(Math.random() * 90 + 5) + "%"
+    btn.style.left = Math.floor(Math.random() * 90 + 5) + "%"
+}
+
+btnNo.addEventListener("mouseenter", function (e) {
+    moverAleatoriamente(e.target)
+});
+
+window.onload = function() {
+    btnNo.style.position = "absolute";
+    btnNo.style.top = "60%";   // Posición desde la parte superior del contenedor
+    btnNo.style.left = "54%";  // Posición desde la parte izquierda del contenedor
+    btnNo.style.transform = "translate(-50%, -50%)"; // Para centrar el botón respecto a su punto de origen
+    btnNo.style.fontSize = "14px";  // Tamaño de fuente
+    btnNo.style.borderRadius = "25px";  // Bordes redondeados
+};
+    </script>
+</body>
+</html>

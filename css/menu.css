@@ -1,0 +1,555 @@
+body {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con mayor transparencia */
+    background-image: url('../img/fondo.jpeg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-repeat: repeat-y; /* Repite la imagen solo en el eje vertical (hacia abajo) */
+    background-attachment: fixed; /* La imagen de fondo permanece fija al hacer scroll */
+    background-position: center; /* Centra la imagen de fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos hijos estén en una columna */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative; /* Permite la superposición de elementos */
+}
+
+/* Capa oscura adicional para oscurecer más la imagen de fondo */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Capa negra semitransparente para oscurecer más */
+    pointer-events: none; /* Permite hacer clic en los elementos debajo de la capa */
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo del contenido */
+    padding: 20px;
+    color: rgb(10, 1, 1);
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Añade un espacio debajo de .contenido */
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    padding: 15px 30px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados para efecto de burbuja */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    filter: brightness(1.0); /* Reduce el brillo de la imagen */
+
+}
+
+.titulo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    color: #080000;
+    margin: 0;
+    filter: brightness(1.0); /* Reduce el brillo de la imagen */
+
+}
+
+.titulo p {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 2.2em;
+    color: #000000;
+    margin: 20px 0 0;
+    filter: brightness(1.0); /* Reduce el brillo de la imagen */
+
+}
+
+
+
+.img-container {
+    width: 65%;
+    height: auto; /* Mantiene la altura automática para ajustar el contenedor al tamaño de la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    margin: auto; /* Centra el contenedor de la imagen */
+    border: 2px solid #ddd; /* Agrega un borde a la imagen */
+    border-radius: 5px; /* Redondea las esquinas del borde */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera alrededor de la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la transición del zoom y la sombra */
+}
+.img-container img {
+    width: 100%; /* Asegura que la imagen cubra el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Mantiene la imagen dentro del contenedor sin recortarla */
+    filter: brightness(1.0); /* Reduce el brillo de la imagen */
+    transition: filter 0.3s ease; /* Suaviza el cambio de brillo al pasar el mouse */
+}
+
+/* Efecto de brillo y zoom al pasar el mouse */
+.img-container:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para un efecto de profundidad */
+}
+
+.img-container:hover img {
+    filter: brightness(1.4); /* Aumenta el brillo de la imagen al pasar el mouse */
+} 
+/* Opcional: Ajusta el tamaño de la imagen si es necesario */
+.special-img1 {
+    max-width: 90%; /* Ajusta este valor para achicar la imagen si lo deseas */
+}
+.special-img2 {
+    max-width: 90%;
+}
+.special-img3 {
+    max-width: 90%;
+}
+.special-img4 {
+    max-width: 90%;
+}
+.special-img5 {
+    max-width: 90%;
+}
+.special-img6 {
+    max-width: 90%;
+}
+
+.col-6.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px; /* Espacio horizontal entre las columnas */
+    margin-bottom: 10px; /* Espacio vertical entre las filas */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.img-container:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mou
+
+
+.img-container img {
+    width: 100%; /* Asegura que la imagen cubra el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Mantiene la imagen dentro del contenedor sin recortarla */
+}
+
+/* Opcional: Ajusta el tamaño de la imagen si es necesario */
+.special-img1 {
+    max-width: 90%; /* Ajusta este valor para achicar la imagen si lo deseas */
+}
+.special-img2 {
+    max-width: 90%;
+}
+.special-img3 {
+    max-width: 90%;
+}
+.special-img4 {
+    max-width: 90%;
+}
+.special-img5 {
+    max-width: 90%;
+}
+.special-img6 {
+    max-width: 90%;
+}
+
+.col-6.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0px; /* Espacio horizontal entre las columnas */
+    margin-bottom: 30px; /* Espacio vertical entre las filas */
+}
+
+
+
+
+
+
+
+
+
+
+
+.gallery-wrapper {
+    position: relative;
+    margin: 0 auto;
+}
+
+.floating-element {
+    position: absolute;
+    z-index: 2; /* Asegura que los elementos se superpongan sobre la galería */
+}
+
+.star1 {
+    /* CITA1 */
+    top: 200px;
+    left: -200px;
+}
+
+.meme1 {
+    /* CITA 2 */
+    bottom: 300px;
+    right: -200px;
+}
+
+.star2 {
+    /* FLORES */
+    top: 200px;
+    right: -200px;
+}
+.meme2 {
+    /* amor */
+    bottom: 400px;
+    left: -200px;
+    
+}
+
+/* Ajusta el tamaño y efecto de los PNG */
+.floating-element img {
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    animation: float 6s ease-in-out infinite; /* Animación suave */
+}
+
+/* Animación de flotación */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom-controls {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.custom-controls .play-pause-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-controls .play-pause-button:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mantiene el estilo original del proyecto sin afectar otras clases */
+.video-slider-wrapper {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Contenedor del slider de videos */
+.video-slider-box {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Contenedor de los videos */
+.video-container {
+    position: relative;
+}
+
+/* Estilos para los videos */
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Estilos para los botones de navegación */
+.video-slider-wrapper .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(117, 109, 109, 0.6);
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    z-index: 10;
+    text-align: center;
+    line-height: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.video-slider-wrapper .prev {
+    left: -51px;
+    background-image: url('../img/prev-arrow.png');
+    transform: rotate(180deg);
+}
+
+.video-slider-wrapper .next {
+    right: -51px;
+    background-image: url('../img/prev-arrow.png');
+}
+
+.video-slider-wrapper .slider-button:hover {
+    background-color: rgba(255, 255, 255, 0.671);
+}
+
+.video-slider-wrapper .slider-button:focus {
+    outline: none;
+}
+
+.spacer {
+    height: 100px; /* Ajusta la altura según lo que necesites */
+}
+
+.play-pause-button {
+    display: none; /* Oculta el botón de reproducción/pausa */
+}
+
+
+/* Estilos para los marcos con texto */
+.text-frame {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(236, 127, 209, 0.671); /* Fondo blanco con transparencia */
+    border: 2px solid #d850af9f; /* Borde del marco */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del marco */
+    z-index: 1; /* Asegura que el marco esté por encima del contenido */
+    width: 200px; /* Ancho del marco */
+    text-align: center; /* Centra el texto */
+    font-size: 16px; /* Tamaño del texto */
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Marco con texto a la izquierda */
+.left-frame {
+    left: -500px; /* Ajusta según el ancho del marco y el margen deseado */
+}
+
+/* Marco con texto a la derecha */
+.right-frame {
+    right: -500px; /* Ajusta según el ancho del marco y el margen deseado */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.special-moments-banner {
+    font-family: 'Poppins', sans-serif;
+
+    background-color: rgba(255, 255, 255, 0.671); /* Fondo blanco */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 680px; /* Ancho máximo del banner */
+    text-align: center;
+    border: 2px solid (255, 255, 255, 0.671); /* Borde claro para un toque adicional */
+    filter: brightness(1.0); /* Reduce el brillo de la imagen */
+
+}
+
+.special-moments-banner h2 {
+    font-size: 2rem;
+    color: #333; /* Color de texto */
+    margin: 0;
+    font-weight: bold;
+}
+
+
+#audio-player {
+    display: none; /* Oculta el reproductor */
+}
+
+#music-control {
+    position: fixed;
+    top: 50%; /* Centra verticalmente */
+    right: 10px; /* Ajusta la distancia desde el borde derecho */
+    transform: translateY(-50%); /* Ajusta para que esté perfectamente centrado */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+#music-icon {
+    width: 50px; /* Ajusta el tamaño según lo necesites */
+    height: auto;
+}
+
+#music-control img {
+    pointer-events: none; /* Evita que el clic se registre en la imagen en lugar del botón */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.song-lyrics {
+    margin: 40px auto;
+    padding: 20px 30px; /* Añade más espacio alrededor del texto */
+    max-width: 600px;
+    background-color: #f57bc2b4; /* Color de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Color del texto */
+    text-align: center;
+}
+
+.song-lyrics h2 {
+    font-size: 24px;
+    color: #141314; /* Puedes cambiar el color del título */
+    margin-bottom: 20px;
+}
+
+.song-lyrics p {
+    font-size: 18px;
+    line-height: 1.8; /* Incrementa el espacio entre líneas */
+    white-space: pre-wrap; /* Mantiene los saltos de línea del HTML */
+    margin: 0;
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: #0e0d0d; /* Color del texto para mayor visibilidad */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.spacer2 {
+    height: 2000px; /* Ajusta la altura según lo que necesites */
+}
+
+
+
+
+
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Asegura que el modal esté encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    backdrop-filter: blur(5px); /* Desenfoque del fondo */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+    white-space: pre-line; /* Permite los saltos de línea en el texto */
+    padding: 20px;
+    background-color: rgba(117, 9, 9, 0.678);
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    position: relative; /* Para el botón de cierre */
+    overflow-y: auto; /* Habilita el scroll dentro del contenido si es necesario */
+}
+
+/* Estilos para el texto del modal */
+#modal-text {
+    font-size: 18px;
+}
+

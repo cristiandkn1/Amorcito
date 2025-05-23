@@ -1,0 +1,305 @@
+body {
+    background-color: rgb(238, 243, 168); /* Fondo suave */
+    background-image: url('../img/fondo.png'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Fuente general */
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    width: 100%; /* Asegura que el body no se extienda más allá del ancho de la ventana */
+}
+
+
+.contenedor-texto {
+    width: 43%; /* Ancho del contenedor */
+    margin: 130px auto 0; /* Margen superior para posicionar */
+    text-align: justify; /* Justifica el texto */
+    top: -160px;
+    left: 10px;
+    padding: 20px; /* Padding general */
+    background-position: center -350px; /* Mueve la imagen de fondo hacia arriba (-20px) */
+    background-origin: content-box; /* Hace que el fondo comience desde el área de contenido */
+    border-radius: 15px; /* Bordes redondeados */
+    color: #333; /* Ajusta el color del texto si es necesario para contraste */
+    
+
+}
+
+.box {
+    position: absolute; /* Para poder mover la imagen libremente */
+    top: -270px; /* Controla la posición vertical */
+    left: -60px; /* Controla la posición horizontal */
+    width: 110%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    z-index: -1; /* Coloca la imagen detrás del texto */
+    opacity: 0.9; /* Transparencia si quieres que sea más sutil */
+}
+
+
+.titulo-rosad1 {
+    font-size: 13px; /* Tamaño de texto ajustado */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #000000; /* Color de texto más oscuro para mejor contraste */
+    padding-bottom: 20px; /* Espacio inferior más generoso */
+    position: relative; /* Permite usar top y left */
+    top: 129px; /* Ajusta la posición vertical */
+    left: -280px; /* Ajusta la posición horizontal */
+    z-index: 1; /* Asegura que el contenedor de texto esté por encima de la imagen */
+    font-family: 'Press Start 2P', cursive; /* Aplica la fuente de Stardew Valley */
+
+}
+.emoji {
+    font-size: 1.5em; /* Ajusta el tamaño de los emojis */
+}
+.titulo-rosado {
+    color: #312fa0; /* Color rosado */
+    font-size: 15px; /* Tamaño de fuente ajustado */
+    margin-top: 0; /* Elimina margen superior */
+    margin-bottom: 20px; /* Espacio inferior para separación */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Permite usar top y left */
+    top: 90px; /* Ajusta la posición vertical */
+    left: -285px; /* Ajusta la posición horizontal */
+    font-family: 'Press Start 2P', cursive; /* Aplica la fuente de Stardew Valley */
+
+}
+
+/* PAM FOTO' */
+.beso {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 3%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 34.3%; /* Ajusta este valor para mover la imagen horizontalmente */
+    width: 600px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+
+}
+/* ACTA' */
+.beso1 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 3%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 1.8%; /* Ajusta este valor para mover la imagen horizontalmente */
+    width: 240px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+
+}
+/* NIÑO BESANDO' */
+.beso2 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 70%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 86.4%; /* Ajusta este valor para mover la imagen horizontalmente */
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+    
+}
+/* TAYLOR' */
+.beso3 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 3%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 84%; /* Ajusta este valor para mover la imagen horizontalmente */
+    width: 240px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+    box-shadow: 0 10px 7px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+
+}
+
+/* OSITOS' */
+.beso4 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 77%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: -1%; /* Ajusta este valor para mover la imagen horizontalmente */
+    width: 250px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+    transform: scaleX(-1); /* Voltea la imagen horizontalmente */
+}
+/* corazon' */
+.beso5 {
+    position: absolute;
+    top: 51%;
+    left: 69.3%;
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scaleX(-1); /* Voltea la imagen horizontalmente */
+}
+.beso5.animated {
+    animation: scaleUpDown 1s ease-in-out;
+}
+
+@keyframes scaleUpDown {
+    0% {
+        transform: scale(1) scaleX(-1);
+    }
+    50% {
+        transform: scale(1.2) scaleX(-1);
+    }
+    100% {
+        transform: scale(1) scaleX(-1);
+    }
+}
+/* CLICK' */
+.beso6 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 31%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 11.7%; /* Ajusta este valor para mover la imagen horizontalmente */
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+    transform: scaleX(1); /* Voltea la imagen horizontalmente */
+}
+/* FIRMA' */
+.beso7 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 39%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 0.5%; /* Ajusta este valor para mover la imagen horizontalmente */
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+    transform: scaleX(1); /* Voltea la imagen horizontalmente */
+}
+
+/* LAROCASHREK' */
+.beso8 {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 29.4%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 68%; /* Ajusta este valor para mover la imagen horizontalmente */
+    width: 120px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+    transform: scaleX(1); /* Voltea la imagen horizontalmente */
+    opacity: 0.3; /* Ajusta la opacidad (0 es completamente transparente, 1 es completamente opaco) */
+}
+
+
+
+
+/* Efecto de hover para la imagen */
+.beso:hover {
+    transform: scale(1.03); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor sobre ella */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para un efecto de elevación */
+}
+.beso1:hover {
+    transform: scale(1.08); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor sobre ella */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para un efecto de elevación */
+}
+
+
+
+
+/* BOTONES -----------------------------------------------------------------*/
+
+@keyframes colorChange {
+    0% {
+        background-color: rgb(243, 145, 145); /* Color inicial */
+    }
+    50% {
+        background-color: rgb(243, 0, 0); /* Color intermedio */
+    }
+    100% {
+        background-color: rgb(161, 6, 250); /* Color final */
+    }
+}
+
+button.si {
+    background-color: rgb(255, 145, 0); /* Color base */
+    color: white; /* Texto blanco */
+    border: 2px solid #333; /* Borde oscuro para el estilo pixelado */
+    padding: 10px 60px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados más pequeños para un look pixelado */
+    font-size: 18px; /* Tamaño de fuente */
+    font-family: 'Press Start 2P', cursive; /* Fuente pixel art (requiere importar la fuente) */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para cambios de color y transformaciones */
+    position: absolute; /* Permite posicionar el botón usando 'top' y 'left' */
+    top: 87.5%; /* Posición desde la parte superior del contenedor */
+    left: 76%; /* Posición desde la parte izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra el botón respecto a su punto de origen */
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Sombra de caja para efecto pixelado */
+    animation: colorChange 3s infinite; /* Animación del color en un ciclo infinito */
+}
+
+button.si:hover {
+    background-color: rgb(255, 100, 0); /* Color más oscuro al pasar el cursor */
+    transform: translate(-50%, -50%) scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7); /* Sombra de caja más pronunciada en hover */
+    animation: none; /* Detiene la animación al pasar el cursor */
+}
+
+
+
+ /* Estilos para la imagen */
+.beso1 {
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+
+ /* CORAZONESESSS CAYENDO */
+
+/* Contenedor para los corazones */
+#falling-hearts {
+    position: fixed; /* Fija el contenedor en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Evita que el contenedor interfiera con otros elementos */
+    overflow: hidden; /* Oculta los corazones que se salen del contenedor */
+    z-index: 2; /* Asegura que el contenedor esté por encima de otros elementos */
+}
+
+/* Estilo para los corazones que caen */
+.heart {
+    position: absolute;
+    width: 30px; /* Tamaño del corazón */
+    height: 30px;
+    background-image: url('/cumplemes/img/corazon.png'); /* Imagen del corazón */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10; /* Asegura que los corazones estén por encima de otros elementos */
+    opacity: 0; /* Inicialmente oculto */
+    animation: fall 5s linear infinite; /* Animación de caída */
+}
+
+/* Animación de caída de los corazones */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px); /* Empieza desde arriba de la pantalla */
+        opacity: 1; /* Asegura que el corazón sea visible al inicio */
+    }
+    100% {
+        transform: translateY(100vh); /* Caída completa */
+        opacity: 0; /* Desaparece al final */
+    }
+}
+
+#volume-icon {
+    width: 40px; /* Ajusta el tamaño según lo necesites */
+    height: 40px;
+    position: fixed; /* Fijo en la pantalla */
+    top: 15px; /* Ajusta la distancia desde el borde superior */
+    right: 1450px; /* Ajusta la distancia desde el borde derecho */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+    z-index: 1000; /* Asegura que el ícono esté encima de otros elementos */
+}

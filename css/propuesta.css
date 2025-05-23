@@ -1,0 +1,121 @@
+body {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia para oscurecer la imagen */
+background-image: url('../img/fondogalaxia.avif');
+
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    width: 100%; /* Asegura que el body no se extienda más allá del ancho de la ventana */
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+body::before {
+    content: ""; /* Necesario para crear el pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta dentro del body */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Superposición oscura con transparencia */
+    backdrop-filter: blur(5px); /* Difumina el fondo */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+
+/* Estilo para la imagen con la clase 'beso' */
+.beso {
+    position: absolute; /* Permite posicionar la imagen utilizando top, left, etc. */
+    top: 10%; /* Ajusta este valor para mover la imagen verticalmente */
+    left: 42%; /* Ajusta este valor para mover la imagen horizontalmente */
+    
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos suaves */
+}
+
+/* Efecto de hover para la imagen */
+.beso:hover {
+    transform: scale(1.03); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor sobre ella */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para un efecto de elevación */
+}
+/* Aplicar las fuentes importadas */
+.titulo-rosad1 {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    color: #fafafa; /* Color rosado */
+    position: relative;
+    top: -4px;
+    text-align: center;
+    font-size: 1.5em; /* Tamaño de fuente ajustado */
+    font-weight: 400; /* Peso de fuente */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Efecto de brillo */
+}
+
+.titulo-rosado {
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    color: #f8459f; /* Color rosado */
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-size: 2.5em; /* Tamaño de fuente ajustado */
+    font-weight: 700; /* Peso de fuente */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9); /* Efecto de brillo */
+}
+
+
+
+/* BOTONES -----------------------------------------------------------------*/
+
+
+button.si {
+    background-color: #ff66b2; /* Color rosado */
+    color: rgb(54, 23, 23); /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para cambios de color y transformaciones */
+    position: absolute; /* Permite posicionar el botón usando 'top' y 'left' */
+    top: 60%; /* Posición desde la parte superior del contenedor */
+    left:45%; /* Posición desde la parte izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra el botón respecto a su punto de origen */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9); /* Efecto de brillo */
+
+}
+
+button.si:hover {
+    background-color: #ff3399; /* Color más oscuro al pasar el cursor */
+    transform: translate(-50%, -50%) scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* Estilo para el botón 'NO' */
+button.no {
+    background-color: #333333; /* Color negro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para cambios de color y transformaciones */
+    position: absolute; /* Permite posicionar el botón usando 'top' y 'left' */
+    top: 60%; /* Posición desde la parte superior del contenedor */
+    left: 54%; /* Posición desde la parte izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra el botón respecto a su punto de origen */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9); /* Efecto de brillo */
+
+}
+
+button.no:hover {
+    background-color: #555555; /* Color gris oscuro al pasar el cursor */
+    transform: translate(-50%, -50%) scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}

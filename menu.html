@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Mes bb💌</title>
+    <link rel="stylesheet" href="css/menu.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <button id="music-control" onclick="toggleMusic()">
+        <img id="music-icon" src="/Amorcito/img/on.png" alt="Control de música">
+    </button>
+    
+    <audio id="background-music" src="/Amorcito/img/coldman.mp3" autoplay loop></audio>
+
+
+
+
+    
+
+
+    <div class="contenido">
+        <div class="titulo">
+            <h1>Feliz 2 Mes juntitos 🥰</h1>
+            <p>25/07/2024</p>
+        </div>
+    </div>
+
+    <div class="gallery-wrapper">
+        <!-- Contenedores para las estrellas, memes, etc. -->
+        <div class="floating-element star1"><img src="img/cita.jpeg" alt="star"></div>
+        <div class="floating-element meme1"><img src="img/cita2.jpeg" alt="meme"></div>
+        <div class="floating-element meme2"><img src="img/amor.png" alt="meme"></div>
+        <div class="floating-element star2"><img src="img/flores.jpeg" alt="star"></div>
+    <div class="container my-4">
+
+
+        <div class="row">
+            
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image.png" class="img-fluid special-img1" alt="..." onclick="openModal('1. Te amo.<br>2. Eres mi todo.<br>3. No sé qué haría sin ti.<br>4. Me haces muy feliz.<br>5. Eres lo mejor que me ha pasado.<br>6. Estoy tan agradecido de tenerte.<br>7. Siempre estás en mi corazón.<br>8. No puedo dejar de pensar en ti.<br>9. Me haces sentir completo.<br>10. Eres mi razón de ser.<br>11. Te necesito en mi vida.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image1.png" class="img-fluid special-img2" alt="..." onclick="openModal('12. Mi vida es mejor contigo.<br>13. Eres mi persona favorita.<br>14. Eres mi sol en los días nublados.<br>15. Estoy loco por ti.<br>16. Eres mi sueño hecho realidad.<br>17. No quiero estar sin ti.<br>18. Eres mi refugio.<br>19. Eres el amor de mi vida.<br>20. Eres mi alma gemela.<br>21. Te adoro.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image2.png" class="img-fluid special-img3" alt="..." onclick="openModal('22. Eres mi alegría diaria.<br>23. Eres la razón por la que sonrío.<br>24. Me haces sentir especial.<br>25. Estoy enamorado de ti.<br>26. Te aprecio más de lo que puedes imaginar.<br>27. Eres mi inspiración.<br>28. No puedo imaginar mi vida sin ti.<br>29. Eres mi mundo.<br>30. Mi corazón late por ti.<br>31. Te extraño cuando no estás.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image3.png" class="img-fluid special-img4" alt="..." onclick="openModal('32. Eres mi mejor amiga.<br>33. Te llevo en mi mente todo el día.<br>34. Me haces mejor persona.<br>35. Estoy tan contento de haberte encontrado.<br>36. Eres la única para mí.<br>37. Eres mi destino.<br>38. Me completas.<br>39. No hay nadie como tú.<br>40. Eres mi hogar.<br>41. Me haces sentir amado.<br>42. Eres el centro de mi universo.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image4.png" class="img-fluid special-img5" alt="..." onclick="openModal('43. Estoy aquí para ti, siempre.<br>44. Eres mi razón para luchar.<br>45. Me haces creer en el amor.<br>46. Eres mi confidente.<br>47. Eres mi fortaleza.<br>48. Mi vida sin ti no tendría sentido.<br>49. Te respeto profundamente.<br>50. Me haces sentir seguro.<br>51. Eres mi compañera de vida.<br>52. Te valoro más de lo que puedes imaginar.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image5.png" class="img-fluid special-img6" alt="..." onclick="openModal('53. Eres mi tesoro.<br>54. No hay nadie que me entienda como tú.<br>55. Eres mi lugar feliz.<br>56. Estoy tan orgulloso de ti.<br>57. Eres mi esperanza.<br>58. Te admiro mucho.<br>59. Me haces reír como nadie.<br>60. Eres mi estrella guía.<br>61. Eres mi razón para sonreír.<br>62. Te quiero más cada día.')">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image6.png" class="img-fluid special-img6" alt="..." onclick="openModal('63. Eres mi paz.<br>64. Eres el amor que siempre soñé.<br>65. Eres mi confidente.<br>66. Me haces sentir vivo.<br>67. Te amo con todo mi corazón.<br>68. Eres mi héroe.<br>69. Te llevo en mi corazón siempre.<br>70. Eres mi bendición.<br>71. Eres mi razón de ser feliz.<br>72. No hay amor más grande que el mío por ti.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image7.png" class="img-fluid special-img6" alt="..." onclick="openModal('73. Eres mi otro yo.<br>74. Eres mi vida entera.<br>75. Me haces sentir querido.<br>76. Eres mi razón para seguir adelante.<br>77. Estoy enamorado de tu esencia.<br>78. Eres mi razón para levantarte cada día.<br>79. Te quiero con locura.<br>80. Eres mi paz en tiempos difíciles.<br>81. Eres mi amor eterno.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image8.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image9.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image10.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image11.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image12.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image13.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image14.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image15.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <div class="img-container">
+                    <img src="img/image16.png" class="img-fluid special-img6" alt="..." onclick="openModal('82. No hay palabras para describir cuánto te quiero.<br>83. Eres mi paraíso.<br>84. Eres mi sueño cumplido.<br>85. Te amo más de lo que las palabras pueden expresar.<br>86. Eres la melodía de mi vida.<br>87. Te amo tal como eres.<br>88. Eres mi alegría.<br>89. Eres el amor que siempre quise.<br>90. Eres mi razón para ser feliz.<br>91. Eres mi fortaleza.')">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content" id="modalContent">
+        <div id="modal-text"></div> <!-- Contenedor para el texto del modal -->
+    </div>
+</div>
+
+
+
+
+<div class="special-moments-banner">
+    <h2>✨🌼🏵️Momentos Especiales🏵️🌷✨</h2>
+</div>
+<div class="video-slider-wrapper">
+    <!-- Marco con texto a la izquierda -->
+    <div class="text-frame left-frame">
+        <p>Por si tienes dudas, SI y con muchisima mas intensidad</p>
+    </div>
+<!-- Sección de videos -->
+<div class="video-slider-wrapper">
+    <button class="prev slider-button"></button> <!-- Botón fuera del contenedor de videos -->
+    <div class="video-slider-box">
+        <div class="video-container">
+          
+         
+            <video src="img/video3.mp4" muted></video>
+            <video src="img/video4.mp4" muted></video>
+            <video src="img/video5.mp4" muted></video>
+            <video src="img/video6.mp4" muted></video>
+            <video src="img/video7.mp4" muted></video>
+            <video src="img/video8.mp4" muted></video>
+            <video src="img/video9.mp4" muted></video>
+            <video src="img/video10.mp4" muted></video>
+            <video src="img/video11.mp4" muted></video>
+            <video src="img/video12.mp4" muted></video>
+            <video src="img/video13.mp4" muted></video>
+            <video src="img/video14.mp4" muted></video>
+            <video src="img/video15.mp4" muted></video>
+            <video src="img/video16.mp4" muted></video>
+            <video src="img/video17.mp4" muted></video>
+            <video src="img/video18.mp4" muted></video>
+            
+            <!-- Agrega más videos aquí -->
+        </div>
+    </div>
+    <button class="next slider-button"></button> <!-- Botón fuera del contenedor de videos -->
+
+</div>
+  <!-- Marco con texto a la derecha -->
+  <div class="text-frame right-frame">
+    <p>Quiero que sepas que Te Amo que sin importar donde estes o como estemos, Te Amo con todo mi ser. Eres mi lugar mas lindo y donde puedo ser yo
+        Te Amo incondicionalmente, eres una persona maravillosa, quiero que lo nuestro dure toda la vida y permanecer en tu mente, tu vida y en tu corazon 💖</p>
+</div>
+</div>
+
+
+
+
+ <!-- Controles personalizados -->
+
+
+
+
+ <div class="custom-controls">
+    <button class="play-pause-button">Play</button>
+</div>
+
+<div class="spacer"></div>
+
+<div class="song-lyrics">
+    <h2>Letra de la Canción🌷</h2>
+    <p>
+        Escapate con el único
+        Que va a estar cuando todo haya acabado
+        Dale la culpa a el arma
+        Que va a estar ahí para tu hijo
+        Si soy yo, no lo sé 
+        Pero al menos la haré sonreír
+        ¿Mentirias para estar aquí por un rato?
+        ¿Mentirias para estar aquí que muera?
+        
+        Cuando te miro
+        Puedo ver a través de ti
+        Y sabes que es verdad
+        Entonces tú también me amas
+        Chica, siempre supe que había
+        Algo entre nosotros
+        Y sabrás que es verdad
+        Cuando dices: Sí, quiero
+        
+        Sabes que digo: Sí, quiero
+        Porque cada vez que me voy te extraño
+        Y sé que dirás: Sí, quiero
+        Porque te miro a los ojos Y puedo decir que es verdad
+        En una noche de invierno, me escapé tan lejos
+        Me escape contigo
+        Dormimos dentro de mi auto
+        Escapate con el único
+        Que te abrazara cuando estes insesible
+        Y te llevara a casa, cuando estes borracha
+        Sosteniendo tu cabello, mientras vomitas
+        Si eres tú, no lo sé
+        Pero al menos tengo algo de tiempo
+        Solo para acostarte aquí a tu lado
+        Contando todas las estrellas esta noche
+        Chica siempre lo supe, te veo a ti y ami
+        Saliendo de un cupé (sí) pintando de baby blue (blue)
+        Bebe te necesito
+        Eres como un sueño hecho realidad
+        Y sí, siempre supe
+        Que seríamos nosotros dos
+        Tomó un largo camino a casa
+        Tocando todas nuestras canciones
+        Fumar cigarrillos
+        Y acariciando su vestido
+        Siempre te extraño más, cuando estoy fumando droga
+        Dicen: El amor te mata lento
+        Es Por eso estoy contigo
+        
+        Escapate con el único
+        Eso estará ahí hasta que todo haya acabado
+        Dale la culpa a el arma
+        Que va a estar ahí para tu hijo
+        Si soy yo, no lo sé
+        Pero al menos la haré sonreír
+        ¿Mentirias para estar aquí por un rato?
+        ¿Mentirias para estar aquí hasta que muera?
+        
+        Cuando te miro
+        Puedo ver a través de ti
+        Y sabes que es verdad
+        Entonces tu también me amas
+        Chica, siempre supe que había
+        Algo entre nosotros
+        Y sabrás que es verdad
+        Cuando dices: Sí, quiero
+    </p>
+</div>
+
+
+<div class="spacer2"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const videoContainer = document.querySelector('.video-container');
+        const videos = videoContainer.querySelectorAll('video');
+        const playPauseButton = document.querySelector('.play-pause-button');
+        let currentIndex = 0;
+    
+        function showVideo(index) {
+            videos.forEach((video, i) => {
+                video.style.display = i === index ? 'block' : 'none';
+            });
+            updatePlayPauseButton();
+        }
+    
+        function updatePlayPauseButton() {
+            const currentVideo = videos[currentIndex];
+            playPauseButton.textContent = currentVideo.paused ? 'Play' : 'Pause';
+        }
+    
+        // Muestra el primer video al inicio
+        showVideo(currentIndex);
+    
+        // Cambiar video con botones de navegación
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+            showVideo(currentIndex);
+        });
+    
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % videos.length;
+            showVideo(currentIndex);
+        });
+    
+        // Control de Play/Pause
+        playPauseButton.addEventListener('click', () => {
+            const currentVideo = videos[currentIndex];
+            if (currentVideo.paused) {
+                currentVideo.play();
+                playPauseButton.textContent = 'Pause';
+            } else {
+                currentVideo.pause();
+                playPauseButton.textContent = 'Play';
+            }
+        });
+    
+        // Reproduce o pausa el video al hacer clic en él
+        videoContainer.addEventListener('click', (event) => {
+            if (event.target.tagName === 'VIDEO') {
+                const video = event.target;
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+        });
+    </script>
+
+
+
+<script>
+    const backgroundMusic = document.getElementById('background-music');
+    const musicIcon = document.getElementById('music-icon');
+
+    // Ajusta el volumen (por ejemplo, al 50%)
+    backgroundMusic.volume = 0.2;
+
+    function toggleMusic() {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play().catch(error => {
+                console.log('No se pudo reproducir automáticamente:', error);
+                // Puedes agregar un mensaje para el usuario aquí
+            });
+            musicIcon.src = "/img/on.png"; // Cambia a la imagen "on"
+        } else {
+            backgroundMusic.pause();
+            musicIcon.src = "/Amorcito/img/off.png"; // Cambia a la imagen "off"
+        }
+    }
+
+    // Intenta reproducir la música automáticamente al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+        backgroundMusic.play().catch(error => {
+            console.log('Reproducción automática bloqueada', error);
+            // Puede que necesites una interacción del usuario para permitir la reproducción
+        });
+    });
+</script>
+
+
+<script>
+    function openModal(text) {
+        var modal = document.getElementById('myModal');
+        var modalContent = document.getElementById('modalContent');
+        var modalText = document.getElementById('modal-text');
+        modalText.innerHTML = text; // Usa innerHTML para interpretar el HTML
+        modal.style.display = 'flex'; // Muestra el modal usando flex
+    }
+    
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+    
+    // Cierra el modal si se hace clic fuera del contenido del modal
+    window.onclick = function(event) {
+        if (event.target === document.getElementById('myModal')) {
+            closeModal();
+        }
+    }
+    </script>
+    
+    
+
+
+</body>
+
+
+
+</html>

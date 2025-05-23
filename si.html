@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Mes Preciosa💞😘</title>
+    <link rel="stylesheet" href="css/si.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        /* Estilo adicional para asegurar que el área de confeti sea visible */
+        body {
+            overflow: hidden; /* Evita barras de desplazamiento causadas por el confeti */
+            margin: 0;
+            padding: 0;
+        }
+        .overlay {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Fija en la pantalla */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(43, 42, 42, 0.301); /* Fondo oscuro con transparencia */
+            backdrop-filter: blur(5px); /* Fondo borroso */
+            display: flex; /* Flexbox para centrar la imagen */
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Asegura que esté encima de otros elementos */
+        }
+        .expanded-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; /* Mantiene la proporción de la imagen */
+            border-radius: 10px;
+        }
+         /* Ocultar el reproductor de audio */
+         #background-music {
+            display: none;
+        }
+    </style>
+</head>
+ 
+<body>
+    
+
+
+    <audio id="background-music">
+        <source src="img/cancionsi.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <img id="volume-icon" src="img/off2.png" alt="Volume Icon" style="cursor: pointer;">
+
+
+    <div class="contenedor-texto">
+        <img class="beso" src="img/foto.gif">
+
+
+
+        <h3 class="titulo-rosad1"> Amor! Te engañe, Ahora Estamos Casados, Puedes ver el acta
+            <span class="emoji">😋</span> Querida Li, Mi Princesita Hermosa<span class="emoji">💞</span>
+            Muchas Gracias Por Aparecer En Mi Vida,
+            Para Este Dia Tan Especial, Tu hombre Te Preparo Este Detallito Y Que No Falte La Cancion Tan Hermosa Que Me dedicaste,
+            Linda, Tierna Y Apañadora En Cada Una De Mis Aventuras, No Existe una forma de describirte eres mas que perfecta, Espero Que Este Mes Que Llevamos
+            Saliendo, Te Haya Echo lo Suficientemente feliz Mi Amor): Quiero Que Sepas Que Te quiero Para Toda La Vida
+            Me Hace Muy Feliz Y Afortunado Tenerte. Todo Lo Que Contiene Esta pagina
+            Es Para Agradecer Cada Pequeño Momento Que Hemos Llevado Juntos, Espero Que La Sigamos Completando
+            Con Cada Locura Secreto Y Amor Que Nos Tenemos, Te Adoro Bebé<span class="emoji">🥰</span>, eres la mas
+            (unica) linda perfecta y hermosa esposa que existe jeje<span class="emoji">💖</span>  </h3>
+            <h2 class="titulo-rosado"><br>Ademas, ahora si es digna de entrar a la pagina que te hice con tanto cariño
+            Preciosa<span class="emoji">💌</span> Estar en una relacion requiere mucho amor, trabajo y atencion, 
+            y yo estoy dispuesto a darte
+            todas esas cositas mi niña , asi que preparese para lo que se viene por que ya no te suelto 
+            <span class="emoji">😘</span></h2>
+
+
+
+
+
+        <button class="si" onclick="location.href='menu.html'">Entrar</button>
+        <img class="beso1" src="img/casados.png" alt="Imagen para expandir" onclick="expandImage(this.src)">
+        <div id="image-overlay" class="overlay" onclick="closeImage()">
+            <img id="expanded-img" class="expanded-img" src="" alt="">
+        </div>
+        <img class="beso2" src="img/besos.webp">
+        
+        <img class="beso3" src="img/taylor.gif">
+        <img class="beso4" src="img/kisss.gif">
+        <img class="box" src="img/box.png">
+        <img id="corazon" class="beso5" src="img/corazon.png" alt="Corazón">
+        <img class="beso6" src="img/click.gif">
+        <img class="beso7" src="img/firma.gif">
+        <img class="beso8" src="img/sticker.webp">
+        <div id="falling-hearts"></div>
+
+
+    
+
+    </div>
+
+    <script>
+        // Espera a que el DOM esté completamente cargado antes de ejecutar el script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener el elemento del corazón
+            const corazon = document.getElementById('corazon');
+
+            // Manejador de clic para el corazón gigante
+            corazon.addEventListener('click', function() {
+                // Muestra un mensaje de "Te Amooooo Sirenita💌"
+                alert('Te Amooooo Preciosa💌');
+        
+                // Añade la clase de animación
+                this.classList.add('animated');
+        
+                // Elimina la clase después de que la animación termine para permitir futuros clics
+                setTimeout(() => {
+                    this.classList.remove('animated');
+                }, 1000); // Tiempo de la animación en milisegundos
+
+                // Inicia la animación de corazones cayendo
+                const container = document.getElementById('falling-hearts');
+
+                function createHeart() {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    // Posición aleatoria horizontal
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    // Velocidad aleatoria de caída
+                    heart.style.animationDuration = Math.random() * 5 + 5 + 's'; // Entre 5 y 10 segundos
+                    container.appendChild(heart);
+
+                    // Elimina el corazón después de que termine la animación
+                    heart.addEventListener('animationend', () => {
+                        heart.remove();
+                    });
+                }
+
+                // Crea corazones en intervalos regulares después del clic
+                setInterval(createHeart, 500); // Crear un corazón cada 500 ms
+            });
+        });
+    </script>
+
+    <script>
+                // MUSICA DE LA PAGINA _______________________________________________________________________________________________________________________________________
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('background-music');
+            
+            // Ajustar el volumen (por ejemplo, 0.3 para 30%)
+            audio.volume = 0.2;
+    
+            // Intentar reproducir el audio (esto es opcional, dependiendo de cómo lo quieras manejar)
+            audio.play().then(() => {
+                console.log('Audio está reproduciéndose con volumen ajustado.');
+            }).catch(error => {
+                console.error('Error al intentar reproducir el audio:', error);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const music = document.getElementById('background-music');
+    const volumeIcon = document.getElementById('volume-icon');
+
+    // Función para alternar entre volumen encendido y apagado
+    function toggleVolume() {
+        if (music.paused) {
+            music.play();
+            volumeIcon.src = 'img/on2.png'; // Cambia la imagen a "on"
+        } else {
+            music.pause();
+            volumeIcon.src = 'img/off2.png'; // Cambia la imagen a "off"
+        }
+    }
+
+    // Configura el evento de clic en el ícono del volumen
+    volumeIcon.addEventListener('click', toggleVolume);
+});
+
+    </script>
+    
+
+  
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('background-music');
+            
+            // Función para intentar reproducir el audio
+            function playAudio() {
+                audio.play().then(() => {
+                    console.log('Audio está reproduciéndose.');
+                }).catch(error => {
+                    console.error('Error al intentar reproducir el audio:', error);
+                });
+            }
+    
+            // Agrega un evento para el primer clic del usuario para iniciar el audio
+            document.addEventListener('click', playAudio, { once: true });
+    
+            // Intenta reproducir el audio automáticamente
+            playAudio();
+        });
+    </script>
+    
+    
+
+
+
+
+
+    <script>
+
+        
+
+        function expandImage(src) {
+            console.log("Expandir imagen: ", src); // Para depuración
+            const overlay = document.getElementById('image-overlay');
+            const expandedImg = document.getElementById('expanded-img');
+            expandedImg.src = src;
+            overlay.style.display = 'flex'; // Muestra el overlay
+        }
+
+        function closeImage() {
+            console.log("Cerrar imagen"); // Para depuración
+            const overlay = document.getElementById('image-overlay');
+            overlay.style.display = 'none'; // Oculta el overlay
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            function lanzarConfeti() {
+                function lanzarEnPosicion(x, y) {
+                    for (let i = 0; i < 5; i++) {
+                        confetti({
+                            particleCount: 250,
+                            spread: 70,
+                            origin: { x, y },
+                            angle: Math.random() * 360,
+                            scalar: 1.2
+                        });
+                    }
+                }
+
+                for (let i = 0; i < 4; i++) {
+                    setTimeout(() => {
+                        const x = Math.random();
+                        const y = Math.random();
+                        lanzarEnPosicion(x, y);
+                    }, i * 1000);
+                }
+            }
+
+            lanzarConfeti();
+
+            // Simula un clic fuera de la imagen para ocultar el overlay
+            setTimeout(() => {
+                const overlay = document.getElementById('image-overlay');
+                overlay.style.display = 'none'; // Asegura que el overlay esté oculto al cargar la página
+            }, 0); // Ejecutar inmediatamente después de la carga del DOM
+        });
+    </script>
+
+
+</body>
+</html>
+
+
