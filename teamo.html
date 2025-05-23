@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Te Amo - Matrix</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    // Fullscreen canvas
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Configuración
+    const fontSize = 22;
+    let columns, drops;
+    function resetDrops() {
+      columns = Math.floor(window.innerWidth / (fontSize * 4.5)); // Menos columnas, más separación
+      drops = [];
+      for (let x = 0; x < columns; x++) {
+        drops[x] = Math.random() * window.innerHeight / fontSize;
+      }
+    }
+    resetDrops();
+    window.addEventListener('resize', resetDrops);
+
+    function draw() {
+      // Fondo negro con ghosting/transparencia
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.font = fontSize + "px monospace";
+      ctx.textAlign = 'center';
+
+      for (let i = 0; i < columns; i++) {
+        // Decidir si sale "Preciosa 💗"
+        let isPreciosa = Math.random() > 0.992; // Probabilidad baja, puedes ajustar
+
+        ctx.save();
+        ctx.translate(i * fontSize * 4.5 + fontSize/2, drops[i] * fontSize);
+
+        if (isPreciosa) {
+          ctx.shadowColor = "#ff59c7";
+          ctx.shadowBlur = 22;
+          ctx.fillStyle = "#ff59c7";
+          ctx.font = "bold " + (fontSize + 6) + "px monospace";
+          ctx.fillText("Preciosa 💗", 0, 0);
+        } else {
+          ctx.shadowColor = "#00FF00";
+          ctx.shadowBlur = 18;
+          ctx.fillStyle = "#00FF00";
+          ctx.font = fontSize + "px monospace";
+          ctx.fillText("Te Amo", 0, 0);
+        }
+
+        ctx.restore();
+
+        // Probabilidad de reiniciar "lluvia"
+        if (Math.random() > 0.975 || drops[i] * fontSize > canvas.height) {
+          drops[i] = 0;
+        }
+        drops[i] += 1;
+      }
+    }
+
+    setInterval(draw, 55);
+  </script>
+</body>
+</html>
